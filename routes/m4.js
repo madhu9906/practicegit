@@ -88,7 +88,7 @@ var examResults = [{
 {
     studentId: 10,
     isExamWritten: true,
-    marks: 96,
+    marks: 30,
 }
 ]
 
