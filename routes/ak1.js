@@ -3,3 +3,4 @@ const ak = () => {
 }
 
 ak()
+console.log('m1 changed')
