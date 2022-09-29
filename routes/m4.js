@@ -63,7 +63,13 @@ var examResults = [{
     studentId: 5,
     isExamWritten: true,
     marks: 45,
-}]
+},
+{
+    studentId: 6,
+    isExamWritten: false,
+    marks: 70,
+}
+]
 
 //1. Prepare students Array by adding marks and total marks
 //2. print topper of the exam?
