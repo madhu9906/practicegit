@@ -62,8 +62,8 @@ var examResults = [{
 },
 {
     studentId: 5,
-    isExamWritten: true,
-    marks: 45,
+    isExamWritten: false,
+    marks: null,
 },
 {
     studentId: 6,
