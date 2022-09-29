@@ -39,6 +39,7 @@ var students = [
 
 
 var totalMarks = 100;
+var studentsId = 0
 
 
 var examResults = [{
