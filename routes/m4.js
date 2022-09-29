@@ -18,6 +18,10 @@ var students = [
     {
         id: 5,
         name: 'Shashi',
+    },
+    {
+        id: 6,
+        name: 'Mark Z'
     }
 ]
 
