@@ -29,7 +29,9 @@ var students = [
     },
     {
         id :8,
-        name: 'jonas'
+        name: 'jonas',
+        id: 8,
+        name: 'einstien',
     }
 ]
 
