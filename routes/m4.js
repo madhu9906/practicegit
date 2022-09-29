@@ -69,7 +69,27 @@ var examResults = [{
     studentId: 6,
     isExamWritten: false,
     marks: 70,
-}
+},
+{
+    studentId: 7,
+    isExamWritten: true,
+    marks: 50,
+},
+{
+    studentId: 8,
+    isExamWritten: true,
+    marks: 35,
+},
+{
+    studentId: 9,
+    isExamWritten: true,
+    marks: 35,
+},
+{
+    studentId: 9,
+    isExamWritten: true,
+    marks: 30,
+},
 ]
 
 //1. Prepare students Array by adding marks and total marks
