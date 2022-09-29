@@ -28,12 +28,15 @@ var students = [
         name: 'Steve'
     },
     {
-        id :8,
+        id: 8,
         name: 'jonas'
     },
     {
         id: 9,
-        name: 'Elon'
+        name: 'kiran',
+    }, {
+        id: 10,
+        name: 'navya'
     }
 ]
 
@@ -70,10 +73,10 @@ var examResults = [{
 //1.Prepare students Array by adding marks and total marks
 let summary = []
 let studentsArray = students.map((eachItem, index) => {
-    let findStudent = examResults.find(item => item.studentId == eachItem.id);  
+    let findStudent = examResults.find(item => item.studentId == eachItem.id);
     summary.push({
         id: eachItem.id,
-        name:eachItem.name,
+        name: eachItem.name,
         marks: findStudent ? findStudent.marks : null,
         totalMarks: totalMarks,
         isExamWritten: findStudent ? findStudent.isExamWritten : false,
@@ -84,17 +87,19 @@ let studentsArray = students.map((eachItem, index) => {
 
 //2.print topper of the exam?
 
-let topperOfExam =  summary.sort((a,b) => b.marks - a.marks).map((eachItem,index) => {return {
-    ...eachItem ,
-    rank : eachItem.isExamWritten ? index+1 :null
-}})
-let topperOfExamResult = topperOfExam.slice(0,1)
+let topperOfExam = summary.sort((a, b) => b.marks - a.marks).map((eachItem, index) => {
+    return {
+        ...eachItem,
+        rank: eachItem.isExamWritten ? index + 1 : null
+    }
+})
+let topperOfExamResult = topperOfExam.slice(0, 1)
 console.log(topperOfExamResult)
 
 //3. add average marks to all the students.
 
-let Average = summary.reduce((acc,cur) => acc = acc+cur.marks,0)/summary.length
-console.log(Average,"Students Average")
+let Average = summary.reduce((acc, cur) => acc = acc + cur.marks, 0) / summary.length
+console.log(Average, "Students Average")
 
 //4. give ranks according to the marks of students.
 // 6. Print all students names as Rakesh, Kumar, betash, Puppy, Shashi.
@@ -108,15 +113,15 @@ let getStudentNames = students.map(eachItem => eachItem.name).join(',')
 console.log(getStudentNames)
 
 // 7. Print all the details fields which are available in an array after completing the task 4.
-console.log(topperOfExam ,'detailedStudentArray')
+console.log(topperOfExam, 'detailedStudentArray')
 
 // 8. Check is everyone passed the exams. pass marks are 35;
 // let passCheck = topperOfExam.filter(eachItem => (eachItem.marks >=35))
 // passCheck.length !== topperOfExam.length ? console.log("Every Student is not Passed in the exam ") :console.log("Every Student is Passed in the exam ")
-let passCheck = topperOfExam.every(eachItem => (eachItem.marks >=35))
-passCheck ? console.log("Every Student is Passed in the exam ") :console.log("Every Student is not Passed in the exam ")
+let passCheck = topperOfExam.every(eachItem => (eachItem.marks >= 35))
+passCheck ? console.log("Every Student is Passed in the exam ") : console.log("Every Student is not Passed in the exam ")
 // 9. Check is atleast one student failed in exam. pass marks are 35.
 // let failCheck = topperOfExam.filter(eachItem => (eachItem.marks <=35))
 // failCheck.length !== topperOfExam.length ? console.log('Yes'):console.log('No')
-let failCheck = topperOfExam.some(eachItem => (eachItem.marks <=35))
-failCheck ?  console.log('Yes'):console.log('No')
+let failCheck = topperOfExam.some(eachItem => (eachItem.marks <= 35))
+failCheck ? console.log('Yes') : console.log('No')
