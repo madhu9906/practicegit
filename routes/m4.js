@@ -22,6 +22,10 @@ var students = [
     {
         id: 6,
         name: 'Mark Z'  //Ak Changed the file
+    },
+    {
+        id: 7,
+        name: 'Steve'
     }
 ]
 
